@@ -17,7 +17,7 @@ class NowPlayingTest extends \PHPUnit_Framework_TestCase
 
         $apiKey = 'abc123';
 
-        $this->nowPlaying = Mockery::mock(NowPlaying::class.'[makeRequest]', [$apiKey]);
+        $this->nowPlaying = Mockery::mock(NowPlaying::class . '[makeRequest]', [$apiKey]);
     }
 
     public function tearDown()
@@ -95,17 +95,17 @@ class NowPlayingTest extends \PHPUnit_Framework_TestCase
     protected function getLastFmResponse($artist, $trackName, $artwork, $nowPlaying = true)
     {
         return ['recenttracks' => [
-                'track' => [
-                    [
-                        'artist' => ['#text' => $artist],
-                        'name' => $trackName,
-                        'image' => [
-                            ['size' => 'extralarge', '#text' => $artwork],
-                        ],
-                        '@attr' => ['nowplaying' => $nowPlaying],
+            'track' => [
+                [
+                    'artist' => ['#text' => $artist],
+                    'name' => $trackName,
+                    'image' => [
+                        ['size' => 'extralarge', '#text' => $artwork],
                     ],
+                    '@attr' => ['nowplaying' => $nowPlaying],
                 ],
             ],
+        ],
         ];
     }
 }
