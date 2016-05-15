@@ -35,6 +35,10 @@ class NowPlaying
 
         $lastTrack = $lastFmResponse['recenttracks']['track'][0];
 
+        if (!isset($lastTrack['@attr']['nowplaying'])) {
+            return false;
+        }
+
         if (!$lastTrack['@attr']['nowplaying']) {
             return false;
         }
