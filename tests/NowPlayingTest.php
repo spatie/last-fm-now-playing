@@ -70,6 +70,21 @@ class NowPlayingTest extends \PHPUnit_Framework_TestCase
     }
 
     /** @test */
+    public function it_will_return_false_if_there_is_an_empty_response()
+    {
+        $userName = 'murze';
+
+        $this->nowPlaying->shouldReceive('makeRequest')
+            ->withArgs([$userName])
+            ->once()
+            ->andReturn($this->getLastFmResponseWithEmptyValues());
+
+        $result = $this->nowPlaying->getTrackInfo($userName);
+
+        $this->assertFalse($result);
+    }
+
+    /** @test */
     public function it_will_raise_an_exception_when_invalid_data_is_returned()
     {
         $this->setExpectedException(BadResponse::class);
@@ -106,6 +121,25 @@ class NowPlayingTest extends \PHPUnit_Framework_TestCase
                 ],
             ],
         ],
+        ];
+    }
+
+    /**
+     * @return array
+     */
+    protected function getLastFmResponseWithEmptyValues()
+    {
+        return [
+            "recenttracks" => [
+                "track" => [],
+                "@attr" => [
+                    "user" => "murze",
+                    "page" => "1",
+                    "perPage" => "1",
+                    "totalPages" => "0",
+                    "total" => "0",
+                ],
+            ],
         ];
     }
 }
