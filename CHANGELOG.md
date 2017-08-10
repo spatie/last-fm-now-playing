@@ -2,7 +2,7 @@
 
 All Notable changes to `last-fm-now-playing` will be documented in this file
 
-### 1.0.1 - 2018-08-10
+### 1.0.2 - 2018-08-10
 
 - avoids error when last fm responds with no tracks
 
