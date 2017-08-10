@@ -33,6 +33,10 @@ class NowPlaying
             return false;
         };
 
+        if (!isset($lastFmResponse['recenttracks']['track'][0])) {
+            return false;
+        }
+
         $lastTrack = $lastFmResponse['recenttracks']['track'][0];
 
         if (!isset($lastTrack['@attr']['nowplaying'])) {
