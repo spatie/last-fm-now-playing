@@ -3,10 +3,11 @@
 namespace Spatie\NowPlaying\Test;
 
 use Mockery;
+use PHPUnit\Framework\TestCase;
 use Spatie\NowPlaying\Exceptions\BadResponse;
 use Spatie\NowPlaying\NowPlaying;
 
-class NowPlayingTest extends \PHPUnit_Framework_TestCase
+class NowPlayingTest extends TestCase
 {
     /** @var  Mockery\Mock|NowPlaying */
     protected $nowPlaying;
