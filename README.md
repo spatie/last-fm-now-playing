@@ -27,7 +27,7 @@ $nowPlaying = Spatie\NowPlaying\NowPlaying($apiKey);
 $nowPlaying->getTrackInfo($lastFmUserName);
 ```
 
-If the specified user is currently playing a track you'll get backy and array with keys `artist`, `trackName` and `artwork`. The `getTrackInfo`-function will return `false` when a user is not currently playing a track.
+If the specified user is currently playing a track you'll get backy and array with keys `artist`, `album`, `trackName`, `artwork` and `url`. The `getTrackInfo`-function will return `false` when a user is not currently playing a track.
 
 If something goes wrong an instance of `Spatie\NowPlaying\Exceptions\BadResponse` will be thrown.
 
