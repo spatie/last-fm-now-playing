@@ -129,7 +129,7 @@ class NowPlayingTest extends TestCase
                     'image' => [
                         ['size' => 'extralarge', '#text' => $artwork],
                     ],
-                    'url' => $lastTrack['url'],
+                    'url' => $url,
                     '@attr' => ['nowplaying' => $nowPlaying],
                 ],
             ],
