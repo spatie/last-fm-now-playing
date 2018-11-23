@@ -51,7 +51,7 @@ class NowPlaying
             'artist' => $lastTrack['artist']['#text'],
             'album' => $lastTrack['album']['#text'],
             'trackName' => $lastTrack['name'],
-            'trackUrl'  => $lastTrack['url'],
+            'url'  => $lastTrack['url'],
             'artwork' => $this->getImage($lastTrack, 'extralarge'),
         ];
     }
