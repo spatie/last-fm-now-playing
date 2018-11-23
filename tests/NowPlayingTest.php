@@ -33,20 +33,24 @@ class NowPlayingTest extends TestCase
     {
         $artist = 'Can';
 
+        $album = 'Kitchen';
+
         $trackName = 'Spoon';
 
         $artwork = 'https://last.fm/an-image.jpg';
+
+        $url = 'https://last.fm/a-song';
 
         $userName = 'murze';
 
         $this->nowPlaying->shouldReceive('makeRequest')
             ->withArgs([$userName])
             ->once()
-            ->andReturn($this->getLastFmResponse($artist, $trackName, $artwork));
+            ->andReturn($this->getLastFmResponse($artist, $album, $trackName, $artwork, $url));
 
         $result = $this->nowPlaying->getTrackInfo($userName);
 
-        $this->assertEquals(compact('artist', 'trackName', 'artwork'), $result);
+        $this->assertEquals(compact('artist', 'album', 'trackName', 'artwork', 'url'), $result);
     }
 
     /** @test */
@@ -54,16 +58,20 @@ class NowPlayingTest extends TestCase
     {
         $artist = 'Can';
 
+        $album = 'Kitchen';
+
         $trackName = 'Spoon';
 
         $artwork = 'https://last.fm/an-image.jpg';
+
+        $url = 'https://last.fm/a-song';
 
         $userName = 'murze';
 
         $this->nowPlaying->shouldReceive('makeRequest')
             ->withArgs([$userName])
             ->once()
-            ->andReturn($this->getLastFmResponse($artist, $trackName, $artwork, false));
+            ->andReturn($this->getLastFmResponse($artist, $album, $trackName, $artwork, $url, false));
 
         $result = $this->nowPlaying->getTrackInfo($userName);
 
@@ -102,22 +110,26 @@ class NowPlayingTest extends TestCase
 
     /**
      * @param $artist
+     * @param $album
      * @param $trackName
      * @param $artwork
+     * @param $url
      * @param bool $nowPlaying
      *
      * @return array
      */
-    protected function getLastFmResponse($artist, $trackName, $artwork, $nowPlaying = true)
+    protected function getLastFmResponse($artist, $album, $trackName, $artwork, $url, $nowPlaying = true)
     {
         return ['recenttracks' => [
             'track' => [
                 [
                     'artist' => ['#text' => $artist],
+                    'album' => ['#text' => $album],
                     'name' => $trackName,
                     'image' => [
                         ['size' => 'extralarge', '#text' => $artwork],
                     ],
+                    'url' => $url,
                     '@attr' => ['nowplaying' => $nowPlaying],
                 ],
             ],
