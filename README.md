@@ -3,7 +3,6 @@
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/spatie/last-fm-now-playing.svg?style=flat-square)](https://packagist.org/packages/spatie/last-fm-now-playing)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
 [![Build Status](https://img.shields.io/travis/spatie/last-fm-now-playing/master.svg?style=flat-square)](https://travis-ci.org/spatie/last-fm-now-playing)
-[![SensioLabsInsight](https://img.shields.io/sensiolabs/i/af13f9b5-e8a9-4a7d-a97d-46b9d4aa86a4.svg?style=flat-square)](https://insight.sensiolabs.com/projects/af13f9b5-e8a9-4a7d-a97d-46b9d4aa86a4)
 [![Quality Score](https://img.shields.io/scrutinizer/g/spatie/last-fm-now-playing.svg?style=flat-square)](https://scrutinizer-ci.com/g/spatie/last-fm-now-playing)
 [![Total Downloads](https://img.shields.io/packagist/dt/spatie/last-fm-now-playing.svg?style=flat-square)](https://packagist.org/packages/spatie/last-fm-now-playing)
 
