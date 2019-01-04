@@ -21,7 +21,7 @@ composer require spatie/last-fm-now-playing
 The constructor of `Spatie\NowPlaying\NowPlaying` needs an api key you can get [from the last.fm site](http://www.last.fm/api/account/create).
 
 ``` php
-$nowPlaying = Spatie\NowPlaying\NowPlaying($apiKey);
+$nowPlaying = new Spatie\NowPlaying\NowPlaying($apiKey);
 
 $nowPlaying->getTrackInfo($lastFmUserName);
 ```
