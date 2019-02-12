@@ -63,7 +63,7 @@ class NowPlaying
      */
     public function makeRequest($user)
     {
-        $url = "http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&limit=1&user={$user}&api_key={$this->apiKey}&format=json";
+        $url = "https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&limit=1&user={$user}&api_key={$this->apiKey}&format=json";
 
         $response = file_get_contents($url);
 
