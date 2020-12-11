@@ -2,6 +2,10 @@
 
 All Notable changes to `last-fm-now-playing` will be documented in this file
 
+## 1.1.2 - 2020-12-11
+
+- allow PHP 8
+
 ## 1.1.1 - 2019-02-11
 
 use https
