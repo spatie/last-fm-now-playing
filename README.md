@@ -1,3 +1,6 @@
+
+[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/support-ukraine.svg?t=1" />](https://supportukrainenow.org)
+
 # Get the currently playing track from a last.fm user
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/spatie/last-fm-now-playing.svg?style=flat-square)](https://packagist.org/packages/spatie/last-fm-now-playing)
